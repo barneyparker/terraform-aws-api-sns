@@ -3,6 +3,7 @@ data "aws_region" "current" {}
 module "sns_integration" {
   source = "github.com/barneyparker/terraform-aws-api-generic"
 
+  name = var.name
   api_id             = var.api_id
   resource_id        = var.resource_id
   http_method        = var.http_method
